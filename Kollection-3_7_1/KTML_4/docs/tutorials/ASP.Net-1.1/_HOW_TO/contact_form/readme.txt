@@ -1,0 +1,1 @@
+To configure each module, check out the manual entry for Manual installation on ASP.NET

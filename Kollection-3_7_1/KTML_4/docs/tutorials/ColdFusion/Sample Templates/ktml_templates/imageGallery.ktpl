@@ -1,0 +1,69 @@
+
+<H2 class=article_title>My&nbsp;Image&nbsp;Gallery</H2>
+<P>Here&nbsp;you&nbsp;can&nbsp;see&nbsp;some&nbsp;of&nbsp;the&nbsp;photos&nbsp;I&nbsp;took&nbsp;during&nbsp;the&nbsp;last&nbsp;trip&nbsp;... 
+lorem ipsum dolor sit amet, consectetuer adipiscing elit.</P>
+<P>
+<TABLE 
+style="BORDER-RIGHT: black 1px dashed; BORDER-TOP: black 1px dashed; BORDER-LEFT: black 1px dashed; BORDER-BOTTOM: black 1px dashed" 
+cellSpacing=2 cellPadding=2 width=500 border=0 KT_modified="1" KT_remTop="1" 
+KT_remTopStyle="1" KT_remTopWidth="1" KT_remTopColor="1" KT_remRight="1" 
+KT_remRightStyle="1" KT_remRightWidth="1" KT_remRightColor="1" KT_remBottom="1" 
+KT_remBottomStyle="1" KT_remBottomWidth="1" KT_remBottomColor="1" KT_remLeft="1" 
+KT_remLeftStyle="1" KT_remLeftWidth="1" KT_remLeftColor="1">
+<TBODY>
+<TR vAlign=top>
+<TD 
+style="BORDER-RIGHT: black 1px dashed; BORDER-TOP: black 1px dashed; BORDER-LEFT: black 1px dashed; BORDER-BOTTOM: black 1px dashed" 
+width=150 KT_modified="1" KT_remTop="1" KT_remTopStyle="1" KT_remTopWidth="1" 
+KT_remTopColor="1" KT_remRight="1" KT_remRightStyle="1" KT_remRightWidth="1" 
+KT_remRightColor="1" KT_remBottom="1" KT_remBottomStyle="1" 
+KT_remBottomWidth="1" KT_remBottomColor="1" KT_remLeft="1" KT_remLeftStyle="1" 
+KT_remLeftWidth="1" KT_remLeftColor="1">&nbsp;<IMG height=79 
+src="/test/dpo/ktml4/uploads/files/Images/ktml_logo_big.gif" 
+width=80 border=0></TD>
+<TD 
+style="BORDER-RIGHT: black 1px dashed; BORDER-TOP: black 1px dashed; BORDER-LEFT: black 1px dashed; BORDER-BOTTOM: black 1px dashed" 
+width=150 KT_modified="1" KT_remTop="1" KT_remTopStyle="1" KT_remTopWidth="1" 
+KT_remTopColor="1" KT_remRight="1" KT_remRightStyle="1" KT_remRightWidth="1" 
+KT_remRightColor="1" KT_remBottom="1" KT_remBottomStyle="1" 
+KT_remBottomWidth="1" KT_remBottomColor="1" KT_remLeft="1" KT_remLeftStyle="1" 
+KT_remLeftWidth="1" KT_remLeftColor="1">&nbsp;<IMG height=79 
+src="/test/dpo/ktml4/uploads/files/Images/ktml_logo_big.gif" 
+width=80 border=0></TD>
+<TD 
+style="BORDER-RIGHT: black 1px dashed; BORDER-TOP: black 1px dashed; BORDER-LEFT: black 1px dashed; BORDER-BOTTOM: black 1px dashed" 
+width=150 KT_modified="1" KT_remTop="1" KT_remTopStyle="1" KT_remTopWidth="1" 
+KT_remTopColor="1" KT_remRight="1" KT_remRightStyle="1" KT_remRightWidth="1" 
+KT_remRightColor="1" KT_remBottom="1" KT_remBottomStyle="1" 
+KT_remBottomWidth="1" KT_remBottomColor="1" KT_remLeft="1" KT_remLeftStyle="1" 
+KT_remLeftWidth="1" KT_remLeftColor="1">&nbsp;<IMG height=79 
+src="/test/dpo/ktml4/uploads/files/Images/ktml_logo_big.gif" 
+width=80 border=0></TD></TR>
+<TR vAlign=top>
+<TD 
+style="BORDER-RIGHT: black 1px dashed; BORDER-TOP: black 1px dashed; BORDER-LEFT: black 1px dashed; BORDER-BOTTOM: black 1px dashed" 
+KT_modified="1" KT_remTop="1" KT_remTopStyle="1" KT_remTopWidth="1" 
+KT_remTopColor="1" KT_remRight="1" KT_remRightStyle="1" KT_remRightWidth="1" 
+KT_remRightColor="1" KT_remBottom="1" KT_remBottomStyle="1" 
+KT_remBottomWidth="1" KT_remBottomColor="1" KT_remLeft="1" KT_remLeftStyle="1" 
+KT_remLeftWidth="1" KT_remLeftColor="1">&nbsp;Lorem ipsum dolor sit amet, 
+consectetuer adipiscing elit.</TD>
+<TD 
+style="BORDER-RIGHT: black 1px dashed; BORDER-TOP: black 1px dashed; BORDER-LEFT: black 1px dashed; BORDER-BOTTOM: black 1px dashed" 
+KT_modified="1" KT_remTop="1" KT_remTopStyle="1" KT_remTopWidth="1" 
+KT_remTopColor="1" KT_remRight="1" KT_remRightStyle="1" KT_remRightWidth="1" 
+KT_remRightColor="1" KT_remBottom="1" KT_remBottomStyle="1" 
+KT_remBottomWidth="1" KT_remBottomColor="1" KT_remLeft="1" KT_remLeftStyle="1" 
+KT_remLeftWidth="1" KT_remLeftColor="1">&nbsp;Lorem ipsum dolor sit amet, 
+consectetuer adipiscing elit.</TD>
+<TD 
+style="BORDER-RIGHT: black 1px dashed; BORDER-TOP: black 1px dashed; BORDER-LEFT: black 1px dashed; BORDER-BOTTOM: black 1px dashed" 
+KT_modified="1" KT_remTop="1" KT_remTopStyle="1" KT_remTopWidth="1" 
+KT_remTopColor="1" KT_remRight="1" KT_remRightStyle="1" KT_remRightWidth="1" 
+KT_remRightColor="1" KT_remBottom="1" KT_remBottomStyle="1" 
+KT_remBottomWidth="1" KT_remBottomColor="1" KT_remLeft="1" KT_remLeftStyle="1" 
+KT_remLeftWidth="1" KT_remLeftColor="1">&nbsp;Lorem ipsum dolor sit amet, 
+consectetuer adipiscing elit.&nbsp;</TD></TR></TBODY></TABLE></P>
+<P>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed malesuada elit 
+a enim. Maecenas ultricies tempor tellus. Nullam iaculis sagittis eros. Donec 
+velit dui, commodo vitae, luctus ut, congue id, tortor.</P>

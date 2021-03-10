@@ -1,0 +1,1 @@
+To completly configure KTML to use the third party applications existing on your system, change the default paths added inside the includes\common\KT_config.inc.asp file with the one you actually use.

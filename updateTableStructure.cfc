@@ -1,0 +1,168 @@
+<cfcomponent hint="Update table structure">
+	<cffunction name="updatePeople2Event" access="public" hint="I update the fields in table People2Event in Address book">
+		<cfargument name="siteurl" required="true" type="String" hint="URL of the site">
+		
+		<cfquery name="checknameid" datasource="#siteurl#">
+		SELECT COL_LENGTH('PEOPLE2EVENT', 'NAMEID') AS IT
+		</cfquery>
+		
+		<cfquery name="checkusergroupid" datasource="#siteurl#">
+			SELECT COL_LENGTH('PEOPLE2EVENT', 'USERGROUPID') AS IT
+		</cfquery>
+		
+		<cfquery name="checkeventid" datasource="#siteurl#">
+			SELECT COL_LENGTH('PEOPLE2EVENT', 'EVENTID') AS IT
+		</cfquery>
+		
+		<cfif checknameid.IT eq "" or checkusergroupid.IT eq "" or checkeventid.IT eq "">
+			<cfquery name="dropTABLE" datasource="#siteurl#">
+				drop table PEOPLE2EVENT
+			</cfquery>
+		
+			<cfquery name="createTablePeople2Event" datasource="#siteurl#">
+				CREATE TABLE PEOPLE2EVENT
+				(
+					NAMEID BIGINT NOT NULL,
+					EVENTID VARCHAR(16) NOT NULL,
+					USERGROUPID VARCHAR(16),
+					PRICE MONEY
+				)
+			</cfquery>
+			
+			<cfquery name="setPrimaryKey1" datasource="#siteurl#">
+				ALTER TABLE PEOPLE2EVENT ADD PRIMARY KEY (NAMEID,EVENTID)
+			</cfquery>
+			
+			<cfquery name="addfk1" datasource="#siteurl#">
+				ALTER TABLE PEOPLE2EVENT
+				ADD FOREIGN KEY (NAMEID) REFERENCES NAME(NAMEID);
+			</cfquery>
+			
+			<cfquery name="addfk2" datasource="#siteurl#">
+				ALTER TABLE PEOPLE2EVENT
+				ADD FOREIGN KEY (EVENTID) REFERENCES EVENT(EVENTID);
+			</cfquery>
+		<cfelse>
+		
+			<cfquery name="checkfieldrelationship" datasource="#siteurl#">
+				SELECT COL_LENGTH('PEOPLE2EVENT', 'RELATIONSHIP') AS IT
+			</cfquery>
+			<cfif checkfieldrelationship.it neq "">
+				<cfquery name="dropfieldrelationship" datasource="#siteurl#">
+					ALTER TABLE PEOPLE2EVENT
+					DROP COLUMN RELATIONSHIP
+				</cfquery>
+			</cfif>
+			<cfquery name="addprice" datasource="#siteurl#">
+				ALTER TABLE PEOPLE2EVENT
+				ADD  (PRICE MONEY)
+			</cfquery>
+		</cfif>
+	</cffunction>
+	
+	<cffunction name="updateSubscriptions" access="public" output="false" returntype="void" hint="I add the subscription tables">
+		<cfargument name="siteurl" required="true" type="String" hint="URL of the site">
+		<cfquery name="checkproductidlen" datasource="#siteurl#">
+			SELECT COL_LENGTH('PRODUCT', 'PRODUCTID') AS IT
+		</cfquery>
+		<cfif checkproductidlen.IT neq 128 and checkproductidlen.IT neq "">
+		<cfquery name="expandproductid" datasource="#siteurl#">
+			
+		</cfquery>
+		<cfelseif checkproductidlen.IT eq "">
+		
+		</cfif>
+		<cfquery name="createSubscriptionTables" datasource="#siteurl#">
+		CREATE TABLE TERMMEASURE
+		(TERMMEASURE VARCHAR(128) NOT NULL PRIMARY KEY);
+		
+		CREATE TABLE SUBSCRIPTION2PRODUCT
+		(SUBSCRIPTIONID BIGINT IDENTITY (1,1) NOT NULL PRIMARY KEY,
+		PRODUCTID VARCHAR(128) NOT NULL,
+		TERM BIGINT NOT NULL,
+		TERMMEASURE VARCHAR(128) NOT NULL);
+		
+		CREATE TABLE SUBSCRIPTION
+		(ID BIGINT IDENTITY (1,1) NOT NULL PRIMARY KEY,
+		SUBSCRIPTIONID BIGINT NOT NULL,
+		NAMEID BIGINT NOT NULL,
+		QUANTITY BIGINT NOT NULL,
+		RENEWALDATE VARCHAR(16),
+		DATERENEWED VARCHAR(16),
+		PRICE MONEY NOT NULL);
+		
+		CREATE TABLE TRIALSUBSCRIPTION
+		(PARENTID BIGINT NOT NULL,
+		CHILDID BIGINT NOT NULL,
+		SEQUENCE BIGINT NOT NULL)
+		
+		CREATE TABLE SUBSCRIPTIONCANCELS
+		(SUBSCRIPTIONID BIGINT NOT NULL,
+		NAMEID BIGINT NOT NULL,
+		CANCELDATE VARCHAR(16) NOT NULL);
+		
+		ALTER TABLE SUBSCRIPTIONCANCELS ADD PRIMARY KEY (SUBSCRIPTIONID, NAMEID, CANCELDATE);
+		
+		ALTER TABLE SUBSCRIPTIONCANCELS ADD CONSTRAINT
+		FK_SUBCANCELS_SUB2PRODUCT FOREIGN KEY
+		(SUBSCRIPTIONID) REFERENCES SUBSCRIPTION2PRODUCT
+		(SUBSCRIPTIONID);
+		
+		ALTER TABLE SUBSCRIPTIONCANCELS ADD CONSTRAINT
+		FK_SUBCANCELS_NAMEID FOREIGN KEY
+		(NAMEID) REFERENCES NAME
+		(NAMEID);
+		
+		CREATE TABLE SUBSCRIPTIONREMINDER
+		(REMINDERID BIGINT NOT NULL PRIMARY KEY,
+		SUBSCRIPTIONID BIGINT NOT NULL,
+		REMINDERMEASURE VARCHAR(128) NOT NULL,
+		REMINDBEFORE BIGINT NOT NULL,
+		REMINDERMESSAGE NTEXT,
+		REPLYTOEMAIL VARCHAR(512),
+		FROMEMAIL VARCHAR(512) NOT NULL)
+		
+		ALTER TABLE SUBSCRIPTIONREMINDER ADD CONSTRAINT
+		FK_SUBREMINDER_SUBSCRIPTION FOREIGN KEY
+		(SUBSCRIPTIONID) REFERENCES SUBSCRIPTION2PRODUCT
+		(SUBSCRIPTIONID);
+		
+		ALTER TABLE SUBSCRIPTIONREMINDER ADD CONSTRAINT
+		FK_SUBREMINDER_MEASURE FOREIGN KEY
+		(REMINDERMEASURE) REFERENCES TERMMEASURE
+		(TERMMEASURE);
+		
+		ALTER TABLE TRIALSUBSCRIPTION ADD PRIMARY KEY (PARENTID, CHILDID);
+		
+		ALTER TABLE TRIALSUBSCRIPTION ADD CONSTRAINT
+		FK_SUBSCRIPTIONPARENT FOREIGN KEY
+		(PARENTID) REFERENCES SUBSCRIPTION2PRODUCT
+		(SUBSCRIPTIONID);
+		
+		ALTER TABLE TRIALSUBSCRIPTION ADD CONSTRAINT
+		FK_SUBSCRIPTIONCHILD FOREIGN KEY
+		(CHILDID) REFERENCES SUBSCRIPTION2PRODUCT
+		(SUBSCRIPTIONID);
+		
+		ALTER TABLE SUBSCRIPTION2PRODUCT ADD CONSTRAINT
+		FK_SUBSCRIPTION2PRODUCT_PRODUCT FOREIGN KEY
+		(PRODUCTID) REFERENCES PRODUCT
+		(PRODUCTID);
+		
+		ALTER TABLE SUBSCRIPTION ADD CONSTRAINT
+		FK_SUBSCRIPTION_SUBSCRIPTION2PRODUCT FOREIGN KEY
+		(SUBSCRIPTIONID) REFERENCES SUBSCRIPTION2PRODUCT
+		(SUBSCRIPTIONID);
+		
+		ALTER TABLE SUBSCRIPTION ADD CONSTRAINT
+		FK_SUBSCRIPTION_NAME FOREIGN KEY
+		(NAMEID) REFERENCES NAME
+		(NAMEID);
+		
+		ALTER TABLE SUBSCRIPTION2PRODUCT ADD CONSTRAINT
+		FK_SUBSCRIPTION_TERMMEASURE FOREIGN KEY
+		(TERMMEASURE) REFERENCES TERMMEASURE
+		(TERMMEASURE);
+		</cfquery>
+	</cffunction>
+</cfcomponent>

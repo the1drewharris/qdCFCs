@@ -1,0 +1,20 @@
+<body onload="parent.resumeLoad1('0')" style="background-color: rgb(255, 255, 255);"><table cellspacing="2" cellpadding="2" border="0" style="border: 1px dashed black;" kt_modified="1" kt_remtop="1" kt_remtopstyle="1" kt_remtopwidth="1" kt_remtopcolor="1" kt_remright="1" kt_remrightstyle="1" kt_remrightwidth="1" kt_remrightcolor="1" kt_rembottom="1" kt_rembottomstyle="1" kt_rembottomwidth="1" kt_rembottomcolor="1" kt_remleft="1" kt_remleftstyle="1" kt_remleftwidth="1" kt_remleftcolor="1">
+  <tbody>
+    <tr>
+      <td width="160" valign="middle" height="100" align="center" style="border: 1px dashed black;" kt_modified="1" kt_remtop="1" kt_remtopstyle="1" kt_remtopwidth="1" kt_remtopcolor="1" kt_remright="1" kt_remrightstyle="1" kt_remrightwidth="1" kt_remrightcolor="1" kt_rembottom="1" kt_rembottomstyle="1" kt_rembottomwidth="1" kt_rembottomcolor="1" kt_remleft="1" kt_remleftstyle="1" kt_remleftwidth="1" kt_remleftcolor="1"><img width="50" height="49" border="0" src="/test/dpo/ktml4/uploads/files/Images/ktml_logo_small.gif" alt="" /></td>
+      <td style="border: 1px dashed black;" kt_modified="1" kt_remtop="1" kt_remtopstyle="1" kt_remtopwidth="1" kt_remtopcolor="1" kt_remright="1" kt_remrightstyle="1" kt_remrightwidth="1" kt_remrightcolor="1" kt_rembottom="1" kt_rembottomstyle="1" kt_rembottomwidth="1" kt_rembottomcolor="1" kt_remleft="1" kt_remleftstyle="1" kt_remleftwidth="1" kt_remleftcolor="1">
+        <h3 class="article_title">Article title and short description</h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed malesuada elit a enim. Maecenas ultricies tempor tellus.<br />
+         
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" style="border: 1px dashed black;" kt_modified="1" kt_remtop="1" kt_remtopstyle="1" kt_remtopwidth="1" kt_remtopcolor="1" kt_remright="1" kt_remrightstyle="1" kt_remrightwidth="1" kt_remrightcolor="1" kt_rembottom="1" kt_rembottomstyle="1" kt_rembottomwidth="1" kt_rembottomcolor="1" kt_remleft="1" kt_remleftstyle="1" kt_remleftwidth="1" kt_remleftcolor="1">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed malesuada elit a enim. Maecenas ultricies tempor tellus. Nullam iaculis sagittis eros. Donec velit dui, commodo vitae, luctus ut, congue id, tortor. Donec ut metus vitae elit tristique volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. </p><p>Ut volutpat, dolor sed pharetra lacinia, magna arcu viverra purus, in semper purus massa in nisi. Morbi mollis pede et ligula. Morbi sodales. Suspendisse quis justo. Quisque non orci eget pede accumsan lobortis. Ut tristique nisi dignissim sapien. Aliquam malesuada. Fusce eu felis ac ligula vulputate nonummy. Pellentesque mi enim, malesuada vitae, convallis et, ultrices quis, diam. Mauris posuere fermentum felis.<br /></p>
+        <p align="right" class="article_footer">Author: Annonymous</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><br />
+</p>
+</body>

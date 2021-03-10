@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<mosinstall version="1.0.0" type="mambot" group="editors">
+    <name>KTML</name>
+	<version>4</version>
+	<creationDate>November 2005</creationDate>
+	<author>InterAKT Online</author>
+	<authorEmail>sales@interaktonline.com</authorEmail>
+	<authorUrl>http://www.interaktonline.com</authorUrl>
+	<copyright>InterAKT Online</copyright>
+	<license>LGPL</license>
+	<description>KTML is a web based Javascript HTML WYSIWYG editor.</description>
+    <params>
+    </params>
+</mosinstall>
